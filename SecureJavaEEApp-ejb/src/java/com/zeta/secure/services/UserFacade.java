@@ -28,4 +28,23 @@ public class UserFacade extends AbstractFacade<User, UserJpaController> implemen
             User find = jpaController.find(username, password);
         return find;
     }
+
+    @Override
+    public void create(User entity) {
+        super.create(entity); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    @RolesAllowed("admin")
+    public void edit(User entity) {
+        super.edit(entity); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    @RolesAllowed("admin")
+    public void remove(User entity) {
+        super.remove(entity); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }

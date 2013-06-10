@@ -11,3 +11,5 @@ dist/*
 build/SecureJavaEEApp-ejb.jar
 
 .DS_Store
+dist/gfdeploy/*
+SecureJavaEEApp-ejb/build/classes/com/zeta/secure/model/AbstractEntity.class
