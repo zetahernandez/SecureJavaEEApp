@@ -1,3 +1,13 @@
 *.jar
 *.class
-*/build/*
+*/build/classes/*
+SecureJavaEEApp-ejb/build/classes/*
+SecureJavaEEApp-ejb/dist/*
+SecureJavaEEApp-war/build/*
+SecureJavaEEApp-war/dist/*
+build/*
+dist/*
+
+build/SecureJavaEEApp-ejb.jar
+
+.DS_Store
