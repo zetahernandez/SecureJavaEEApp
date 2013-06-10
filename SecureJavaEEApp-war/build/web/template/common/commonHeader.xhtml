@@ -9,16 +9,23 @@
                         xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:a4j="http://richfaces.org/a4j"
                         xmlns:rich="http://richfaces.org/rich">
             <rich:toolbar id="toolbar" height="26px">
-                <h:panelGroup rendered="#{auth.loggedUser == null}">
-                    <ui:insert name="login">
-                        <ui:include src="/template/views/login.xhtml" />
-                    </ui:insert>
-                </h:panelGroup>
-                <h:panelGroup id="logged" rendered="#{auth.loggedUser != null}">
-                    <ui:insert>
-                        <ui:include src="/template/views/profile.xhtml" />
-                    </ui:insert>
-                </h:panelGroup>
+                <rich:toolbarGroup>
+                    <h:panelGroup rendered="#{auth.loggedUser == null}">
+                        <ui:insert name="login">
+                            <ui:include src="/template/views/login.xhtml" />
+                        </ui:insert>
+                    </h:panelGroup>
+                    <h:panelGroup id="logout" rendered="#{auth.loggedUser != null}">
+                        <ui:insert>
+                            <ui:include src="/template/views/logout.xhtml" />
+                        </ui:insert>
+                    </h:panelGroup>
+                    <h:panelGroup id="logged" rendered="#{auth.loggedUser != null}">
+                        <ui:insert>
+                            <ui:include src="/template/views/profile.xhtml" />
+                        </ui:insert>
+                    </h:panelGroup>
+                </rich:toolbarGroup>
             </rich:toolbar>
         </ui:composition>
     </body>

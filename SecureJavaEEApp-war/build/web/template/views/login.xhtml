@@ -26,7 +26,7 @@
                         <h:inputText id="username" value="#{auth.username}" />
                         <h:outputLabel for="password" value="Password" />
                         <h:inputSecret id="password" value="#{auth.password}" />
-                        <a4j:commandLink action="#{auth.login}" value="Login ajax " execute="@form" render="toolbar"></a4j:commandLink>
+                        <a4j:commandLink action="#{auth.login}" value="Login ajax "  execute="@form,toolbar,logout,logged" render="toolbar"></a4j:commandLink>
                     </h:panelGrid>
                 </h:form>
                 
