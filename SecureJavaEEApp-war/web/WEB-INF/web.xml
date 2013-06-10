@@ -21,6 +21,18 @@
     <welcome-file-list>
         <welcome-file>faces/default.xhtml</welcome-file>
     </welcome-file-list>
+    <security-constraint>
+        <display-name>Admin constrain</display-name>
+        <web-resource-collection>
+            <web-resource-name>Admin Resource</web-resource-name>
+            <description/>
+            <url-pattern>/faces/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
     <login-config>
         <auth-method>FORM</auth-method>
         <realm-name>security-test</realm-name>
